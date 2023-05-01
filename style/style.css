@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: azure;
+}
+
+header {
+    background-color: darkgoldenrod;
+}
+
+nav {
+    background-color: darkkhaki;
+}
+
+main {
+    background-color: lightsalmon;
+}
+
+section {
+    background-color: lightskyblue;
+}
+
+article {
+    background-color: lightgoldenrodyellow;
+}
+
+
+aside {
+    background-color: darkslategray;
+}
+
+footer {
+    background-color: black;
+}
