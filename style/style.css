@@ -8,35 +8,123 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: azure;
-}
+ .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-header {
-    background-color: darkgoldenrod;
-}
-
-nav {
-    background-color: darkkhaki;
-}
-
-main {
-    background-color: lightsalmon;
-}
-
-section {
-    background-color: lightskyblue;
-}
-
-article {
-    background-color: lightgoldenrodyellow;
-}
-
-
-aside {
-    background-color: darkslategray;
-}
-
-footer {
-    background-color: black;
-}
+  .quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .quantity-input {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  .add-btn {
+    background-color: #75AADB ;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #184b77 ;
+  }
+ 
+  .add-btn:active {
+    /* Estilos para el hover cuando se haga clic */
+    /* Por ejemplo, cambiar el color de fondo o el color del texto */
+    background-color: #0b8a7b;
+    color: white;
+  }
+  
+  
+  .plus-btn,
+  .minus-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .plus-btn:hover,
+  .minus-btn:hover {
+    background-color: #ddd;
+  }
+  
+  #cart {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  #cart h2 {
+    margin-bottom: 10px;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    margin-bottom: 5px;
+  }
+  
+  .remove-btn {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    background-color: #CC0000;
+  }
+  
+  #total {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .product {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product {
+      width: 100%;
+    }
+  }
+  
