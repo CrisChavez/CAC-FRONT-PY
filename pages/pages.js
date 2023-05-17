@@ -94,9 +94,11 @@ function validarFormulario() {
         setTimeout(() => {
             formulario.removeChild(exito);
         }, 3000);
+
+        formulario.reset();
     }
 
-    formulario.reset();
+    
 }
 
 function mostrarError(input, mensaje) {
