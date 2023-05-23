@@ -148,12 +148,12 @@ html {
     font-size: 1.6rem;
  }
 
- /* p {
-    font-size: 2rem;
+ p {
+    /* font-size: 2rem;
     color: var(--blanco);
-    line-height: 1.5;
+    line-height: 1.5; */
     text-align: center;
- } */
+ }
 
  .contenedor {
     width: 95%;
@@ -399,4 +399,11 @@ html {
    text-align: center;
    text-transform: uppercase;
    font-weight: 700;
+}
+
+/* CONTACTANOS */
+/* MAP*/
+#map {
+   height: 500px;
+   width: 100%;
 }

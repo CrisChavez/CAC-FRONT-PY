@@ -9,8 +9,8 @@
         <!-- Link de fuente -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="./style/style.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Maps</title>
     </head>
 
 
@@ -29,21 +29,29 @@
                 </div>
     
                 <nav class="navegacion-principal">
-                    <a href="./index.html">Inicio</a>
-                    <a href="./pages/tienda.html">Tienda</a>
-                    <a href="./pages/galeria.html">Galería</a>
-                    <a href="./pages/contacto.html">Contacto</a>
+                    <a href="../index.html">Inicio</a>
+                    <a href="./tienda.html">Tienda</a>
+                    <a href="./galeria.html">Galería</a>
+                    <a href="./contacto.html">Contacto</a>
                 </nav>
             </div>
         </header>
 
-        <main class="contenedor">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dY2GNZkv_F4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="map"></div>
+        <p>Ubicación de la sede</p>
+
+        <main class="contenedor contenido-contacto">
+            <div class="contactanos">
+                <h1 class="font-contacto">Contactanos</h1>
+
+                <ul>
+                    <li> Sede: <span>Oficina 1, piso 4</span></li>
+                    <li> Teléfono: <span> 541122334455</span></li>
+                    <li> Email: <span>corona2@fanspage.com.ar</span></li>
+                </ul>
+            </div>
         </main>
 
-        <aside>
-
-        </aside>
 
         <footer class="footer">
             <div class="contenedor">
@@ -94,7 +102,7 @@
                         </div>
                     </div>
                     
-                    <div class="contacto"><a href="./pages/api.html">Contactanos</a></div>
+                    <div class="contacto"><a href="./api.html">Contactanos</a></div>
     
                 </div>
     
@@ -105,8 +113,11 @@
             </div>
         </footer>
 
-        <script src="./menu.js"></script>
-        <script src="./main.js"></script>
+        <script src="./api.js"></script>
+        <script src="../menu.js"></script>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNbn7LeDP-ba2x4IpT-2-503nsb6rcQAA&callback=initMap">
+        </script>
         <script src="https://kit.fontawesome.com/266e8a2192.js" crossorigin="anonymous"></script>
     </body>
 </html>
