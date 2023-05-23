@@ -1,42 +1,402 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
+:root {
+   /* Tipografía */
+   --fuentePrincipal: 'Montserrat', sans-serif;
+
+   /* Colores */
+   --colorPrincipal: #793a7b;
+   --colorSecundario: #1d293e;
+   --naranja: #f3b229;
+   --negro: #000000;
+   --blanco: #ffffff;
+   --gris: #3a3a3a;
+   --grisClaro: #e6e8f0;
+   --rojo: #fc0404;
+   --verde:#00ff5e; 
 }
 
+
+/* GLOBALES */ 
 html {
-    scroll-behavior: smooth;
+    font-size: 62.5%; /* 10px igual a 1rem*/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
-body {
-    background-color: azure;
+ .container {
+   display: flex;
+   justify-content: center;
+   align-content: space-between;
+  }
+  
+  .product {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .quantity-input {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  .add-btn {
+    background-color: #75AADB ;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #184b77 ;
+  }
+ 
+  .add-btn:active {
+    background-color: #0b8a7b;
+    color: white;
+  }
+  
+  
+  .plus-btn,
+  .minus-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .plus-btn:hover,
+  .minus-btn:hover {
+    background-color: #ddd;
+  }
+  
+  #cart {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  #cart h2 {
+    margin-bottom: 10px;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    margin-bottom: 5px;
+  }
+  
+  .remove-btn {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    background-color: #CC0000;
+  }
+  
+  #total {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .product {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product {
+      width: 100%;
+    }
+  }
+  
+ body {
+    font-family: var(--fuentePrincipal) ;
+    font-size: 1.6rem;
+ }
+
+ /* p {
+    font-size: 2rem;
+    color: var(--blanco);
+    line-height: 1.5;
+    text-align: center;
+ } */
+
+ .contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ h1, h2, h3 {
+    margin: 0 0 5rem 0;
+ }
+ h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+ }
+ h2 {
+    font-size: 3.6rem;
+ }
+ h3 {
+    font-size: 3rem;
+ }
+
+ #contacto_img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-header {
-    background-color: darkgoldenrod;
+/* BOTONES */
+
+.boton-naranja {
+   background-color: var(--naranja);
+   color: var(--blanco);
+   font-weight: bold;
+   text-decoration: none;
+   padding: 1rem 3rem;
+   margin: 2.5rem 0 2.5rem 0;
+   border: none;
+   border-radius: 2rem;
+}
+ /* Transformación y transición */
+.boton-naranja:hover {
+   transform: scale(1.1);
+   transition: all 0.2s ease-in-out;
+   /* background-color: #d2991d; */
+   cursor: pointer;
+   border: 3px solid var(--naranja);
+   background-color: var(--blanco);
+   color: var(--naranja);
 }
 
-nav {
-    background-color: darkkhaki;
+ /* HEADER */
+
+ .header {
+    background-color: var(--colorPrincipal);
+    color: var(--blanco);
+ }
+ @media (min-width: 768px) {
+    .contenido-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    } 
+ }
+
+ .header h1 {
+    margin-bottom: 0;
+    text-align: center;
+ }
+ .header p {
+    margin-top: 0;
+    font-size: 1.5rem;
+ }
+ @media (min-width: 768px) {
+    .header p {
+        margin: 0;
+    }
+ }
+
+ .navegacion-principal {
+    visibility: hidden; /* display: none; */
+    opacity: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear;
+
+    font-size: 1.8rem;
+    text-align: center;
+ }
+ @media (min-width: 768px) {
+    .navegacion-principal {
+        display: flex;
+        gap: 2rem;
+        opacity: 1;
+        visibility: visible;
+    }
+ }
+
+ .navegacion-principal a {
+    color: var(--blanco);
+    display: block;
+    padding-bottom: 2rem;
+ }
+ @media (min-width: 768px) {
+    .navegacion-principal a {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+ }
+/*Menu de hamburguesa*/
+@media (min-width: 768px) {
+   .menu-nav {
+      display: none;
+   }
+}
+.menu-nav {
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 4rem;
+}
+.mostrar {
+   visibility: visible;
+   opacity: 1;
 }
 
-main {
-    background-color: lightsalmon;
+ 
+ /* FOOTER */
+ .footer {
+   background-color: var(--colorSecundario);
+   color: var(--blanco);
+ }
+ @media (min-width: 768px) {
+    .contenido-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+ }
+ .contenido-footer {
+   padding: 2rem;
+ }
+ @media (min-width: 768px) {
+    .redes {
+      display: flex;
+      align-items: center;
+    }
+    .redes div {
+      margin-right: 2rem;
+    }
+    .contacto {
+      margin-right: 4rem;
+    }
+ }
+.redes {
+   text-transform: uppercase;
+}
+ .iconos {
+   text-align: center;
+ }
+ .contacto a {
+   color: var(--blanco);
+   font-size: 2rem;
+ }
+ .contacto {
+   text-transform: uppercase;
+   text-align: center;
+   margin-top: 2rem;
+ }
+ .copyright p {
+   font-size: 1.5rem;
+ }
+
+ a:hover {
+   color: var(--naranja);
+ }
+ 
+ /* MAIN */
+ /* main {
+   background-color: var(--grisClaro);
+ } */
+
+/* FORMULARIO */
+.contenido-contacto {
+   max-width: 80rem;
+}
+.formulario p {
+   font-size: 1.4rem;
+   color: var(--gris);
+   text-align: left;
+}
+.font-contacto {
+   font-weight: 400;
+   text-align: center;
+   padding-top: 4rem;
+}
+.formulario legend {
+   font-size: 2rem;
+   color: var(--gris);
+}
+.formulario label {
+   font-weight: bold;
+   text-transform: uppercase;
+   display: block;
+}
+.formulario input:not([type="submit"]), textarea, select {
+   padding: 1rem;
+   display: block;
+   width: 100%;
+   background-color: var(--blanco);
+   border: 1px solid #d7d9e1;
+   border-radius: 1rem;
+   margin-bottom: 2rem;
+}
+.forma-contacto {
+   max-width: 30rem;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
 }
 
-section {
-    background-color: lightskyblue;
+.forma-contacto input[type="radio"] {
+   margin: 0;
+   width: auto;
 }
 
-article {
-    background-color: lightgoldenrodyellow;
+/* Form validacion*/
+.error .error-mensaje {
+   color: var(--rojo);
 }
 
-
-aside {
-    background-color: darkslategray;
-}
-
-footer {
-    background-color: black;
+.exito {
+   background-color: var(--verde);
+   color: var(--blanco);
+   font-size: 1.5rem;
+   padding: 1rem;
+   margin-bottom: 2rem;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 700;
 }

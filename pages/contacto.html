@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+
+        <!-- Link de fuente -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        
+        <header class="header">
+            <div class="contenedor contenido-header">
+                <div>
+                    <h1>Fan <span>Page</span></h1>
+                    <p>Argentina Campeón</p>
+                </div>
+                
+                <nav class="navegacion-principal">
+                    <a href="../index.html">Inicio</a>
+                    <a href="/pages/nosotros.html">Nosotros</a>
+                    <a href="/pages/tienda.html">Tienda</a>
+                    <a href="/pages/galeria.html">Galería</a>
+                    <a href="/pages/contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="contenedor contenido-contacto">
+            <h1 class="font-contacto">Contacto</h1>
+
+            <img id="contacto_img" src="../image/contactos.jpg" alt="imagen de contacto">
+
+            <h3 class="font-contacto">Completa los datos Campeón</h3>
+
+            <form class="formulario">
+                <fieldset>
+                    <legend>Información Personal</legend>
+
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <p class="error-mensaje"></p>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <p class="error-mensaje"></p>
+                    </div>
+                
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                        <p class="error-mensaje"></p>
+                    </div>
+
+                    <div>
+                        <label for="domicilio">Domicilio</label>
+                        <input type="text" placeholder="Tu domicilio" id="domicilio">
+                        <p class="error-mensaje"></p>
+                    </div>
+                
+                    <div>
+                        <label for="provincia">Provincia:</label>
+                        <select id="provincia" name="provincia">
+                            <option value="">-- Seleccione una provincia --</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Corrientes">Corrientes</option>
+                            <option value="Entre Ríos">Entre Ríos</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquén">Neuquén</option>
+                            <option value="Río Negro">Río Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Santiago del Estero">Santiago del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucumán">Tucumán</option>
+                        </select>
+                        <p class="error-mensaje"></p>
+                    </div>
+                    
+                    <div>
+                        <label for="localidad">Localidad</label>
+                        <input type="text" placeholder="Localidad donde resides" id="localidad">
+                        <p class="error-mensaje"></p>
+                    </div>
+                    
+                    <div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" cols="20" rows="10"></textarea>
+                        <p class="error-mensaje"></p>
+                    </div>
+                    
+                </fieldset>
+              
+                <fieldset>
+                    <legend>Contacto</legend>
+                
+                    <p>Como desea ser contactado</p>
+                
+                    <div class="forma-contacto">
+                        <label for="contactar-email">E-mail</label>
+                        <input name="contacto" type="radio" value="email" id="contactarEmail">
+                
+                        <label for="contactar-telefono">Teléfono</label>
+                        <input name="contacto" type="radio" value="telefono" id="contactarTelefono">
+
+                        <p class="error-mensaje error-contacto"></p>
+                    </div>
+                
+                    <p>Fecha y hora en la que desea ser contactado</p>
+                
+                    <div>
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha">
+                        <p class="error-mensaje"></p>
+                    </div>
+                
+                    <div>
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" min="08:00" max="19:00">
+                        <p class="error-mensaje"></p>
+                    </div>
+                    
+                </fieldset>
+              
+                <input type="submit" value="Enviar" class="boton-naranja">
+            </form>
+            
+        </main>
+
+        <footer class="footer">
+            <div class="contenedor">
+                <div class="contenido-footer">
+                    <div class="redes">
+                        <div>
+                            <p>Siguenos</p>
+                        </div>
+                        
+                        <div class="iconos">
+                            <a href="https://www.youtube.com/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <rect x="3" y="5" width="18" height="14" rx="4" />
+                                    <path d="M10 9l5 3l-5 3z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                                </svg>
+                            </a>
+            
+                            <a href="https://www.facebook.com/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                                </svg>
+                            </a>
+                            
+                            <a href="https://twitter.com/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                                </svg>
+                            </a>
+            
+                            <a href="https://www.tiktok.com/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5" />
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="contacto"><a href="">Contactanos</a></div>
+    
+                </div>
+    
+                <div class="copyright contenido-footer">
+                    <p>Todos los derechos reservados 2023 &copy;</p>
+                    <p>Desarrollado por Grupo TPO</p>
+                </div>
+            </div>
+        </footer>
+        <script src="./pages.js"></script>
+    </body>
+</html>
