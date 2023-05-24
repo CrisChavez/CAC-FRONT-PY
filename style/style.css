@@ -400,3 +400,158 @@ html {
    text-transform: uppercase;
    font-weight: 700;
 }
+
+/* GALERIA */
+.galery {
+   max-width: 800px;
+   padding: 1rem;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 200px 200px 200px 200px;
+   grid-template-rows: 200px 200px 200px;
+   grid-gap: 1rem;
+ }
+  
+ img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+ }
+  
+ .item-a {
+   grid-row: 1 / 3;
+ }
+  
+ .item-b {
+   grid-column: 3 / 5;
+ }
+  
+ .item-c {
+   grid-row: 2 / 4;
+ }
+  
+ .item-d {
+   grid-column: 3 / 5;
+}
+
+
+/* Index */
+.dj-banner{margin: 30px 0; position: relative}
+   .dj-banner .dj-bg{background-color: transparent; background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;}
+   .dj-banner .dj-bg img{display: block; margin: 20px auto; padding: 20px 0;}
+   .dj-banner .dj-text{text-align: center; padding-bottom: 20px;}
+   @media screen and (min-width:768px){
+      .dj-banner .dj-bg img{margin-right: 200px;}
+      .dj-banner .dj-text{position: absolute; top: 50%; left: 10%; transform: translate(-10%, -50%); width: 50%; text-align: left;}
+      .dj-banner .dj-text h1{font-size: calc(2*1.5vw);}
+      .dj-banner .dj-text p{font-size: calc(1.2*1.5vw);}
+   }
+
+.imgBanner{
+	height: 340px;
+	width: 540px;
+   border-radius: 20%;
+}
+
+   
+
+body{
+   background-image: url(../image/fondoArg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; 
+   width: 100%;
+   height: 100%;
+    
+}
+
+.juegoPelotas {
+   color: rgb(49, 2, 49);
+   text-transform: capitalize;
+}
+.colorLetra{
+   color: white;
+   font-size:10px;
+}
+
+.colorTitle{
+   color: rgb(49, 2, 49);
+   padding-bottom: 20px;
+}
+
+   
+   
+#juego h1{
+   text-align: center;
+   margin: 1em;
+   margin-left: 10px;
+   margin-top: 80px;
+}
+
+#juego{
+   margin-left: 60px;
+}
+
+#otro,
+#piedra,
+#papel,
+#tijera{
+    width: 140px;
+    height: 140px;
+    border-radius:50%;
+    margin: 0;
+    border: 1px solid rgba(0,0,0,0);
+    padding: 0;
+    display:inline-block;
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 4em 0 0 8em;
+    background: url(../image/pelota.jpg);
+}
+
+@media (min-width: 768px) {
+  #otro,
+  #piedra,
+  #papel,
+  #tijera {
+    width: 140px;
+    height: 140px;
+    border-radius:50%;
+    margin: 0;
+    border: 1px solid rgba(0,0,0,0);
+    padding: 0;
+    display:inline-block;
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 4em 0 0 8em;
+    background: url(../image/pelota.jpg);
+      
+  }
+}
+
+#tijera:hover{
+    background: url(../image/segun2.png);
+    align-content: center;
+    
+}
+
+#papel:hover{
+    background: url(../image/copa.png);
+    align-content: center;
+    
+}
+
+#piedra:hover{
+  background: url(../image/bobo.png);
+  align-content: center;
+  
+
+}
+
+#otro:hover{
+  background: url(../image/seguiParticipando.png);
+  align-content: center;
+
+}
