@@ -144,16 +144,21 @@ html {
   }
   
  body {
-    font-family: var(--fuentePrincipal) ;
-    font-size: 1.6rem;
- }
+   font-family: var(--fuentePrincipal) ;
+   font-size: 1.6rem;
+   background-image: url(../image/fondoArg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; 
+   width: 100%;
+   height: 100%;
+}
 
- /* p {
-    font-size: 2rem;
+ p {
+    /* font-size: 2rem;
     color: var(--blanco);
-    line-height: 1.5;
+    line-height: 1.5; */
     text-align: center;
- } */
+ }
 
  .contenedor {
     width: 95%;
@@ -210,6 +215,13 @@ html {
    background-color: var(--blanco);
    color: var(--naranja);
 }
+.boton-vino {
+   background-color: var(--colorPrincipal);
+}
+.boton-vino:hover {
+   border: 3px solid var(--colorPrincipal);
+   color: var(--colorPrincipal);
+}
 
  /* HEADER */
 
@@ -217,6 +229,33 @@ html {
     background-color: var(--colorPrincipal);
     color: var(--blanco);
  }
+ 
+.logo {
+   display: block;
+   text-align: center;
+}
+.logo div {
+   height: 20rem;
+   padding-top: 2rem;
+}
+.img-1 img {
+   height: 20rem;
+   width: auto;
+}
+.img-2 img {
+   height: 20rem;
+   width: auto;
+}
+
+@media (min-width: 768px) {
+   .logo {
+      display: flex;
+   }
+   .logo div {
+      padding: 0 2rem 0 0;
+   }
+}
+
  @media (min-width: 768px) {
     .contenido-header {
         display: flex;
@@ -268,6 +307,7 @@ html {
         padding-bottom: 0;
     }
  }
+
 /*Menu de hamburguesa*/
 @media (min-width: 768px) {
    .menu-nav {
@@ -342,7 +382,9 @@ html {
 
 /* FORMULARIO */
 .contenido-contacto {
+   background-color: var(--blanco);
    max-width: 80rem;
+   padding: 3rem;
 }
 .formulario p {
    font-size: 1.4rem;
@@ -436,7 +478,7 @@ html {
 }
 
 
-/* Index */
+/* INDEX */
 .dj-banner{margin: 30px 0; position: relative}
    .dj-banner .dj-bg{background-color: transparent; background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;}
    .dj-banner .dj-bg img{display: block; margin: 20px auto; padding: 20px 0;}
@@ -454,17 +496,6 @@ html {
    border-radius: 20%;
 }
 
-   
-
-body{
-   background-image: url(../image/fondoArg.jpg);
-   background-repeat: no-repeat;
-   background-size: cover; 
-   width: 100%;
-   height: 100%;
-    
-}
-
 .juegoPelotas {
    color: rgb(49, 2, 49);
    text-transform: capitalize;
@@ -476,12 +507,12 @@ body{
 
 .colorTitle{
    color: rgb(49, 2, 49);
-   padding-bottom: 20px;
+   /* padding-bottom: 20px; */
 }
 
    
    
-#juego h1{
+#juego h2{
    text-align: center;
    margin: 1em;
    margin-left: 10px;
@@ -555,3 +586,38 @@ body{
   align-content: center;
 
 }
+ /* Iframe video */
+.iframe-video {
+   text-align: center;
+}
+.iframe-video h2 {
+   margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+   .article{
+      max-width: 400px;
+      align-items: center;
+      padding: 1rem;
+      margin-left: 300px;
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      grid-template-rows: 200px 200px 200px; 
+      
+    }
+    
+    .cancha{
+      grid-row: 1/8;
+      grid-column: 1/8; 
+    }
+}
+ 
+/* CONTACTANOS */
+/* MAP*/
+#map {
+   height: 500px;
+   width: 100%;
+}
+
+/* Media Query  */

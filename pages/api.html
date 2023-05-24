@@ -8,9 +8,9 @@
 
         <!-- Link de fuente -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-        <link rel="icon" type="img/jpg" href="./image/logoPrueba.png">
-        <link rel="stylesheet" href="./style/style.css">
-        <title>Fan Page</title>
+        <link rel="icon" type="img/jpg" href="../image/logoPrueba.png">
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Maps</title>
     </head>
 
 
@@ -20,16 +20,8 @@
         <header class="header">
             <div class="contenedor contenido-header">
                 <div>
-                    <a href="./index.html">
-                        <div class="logo">
-                            <div class="img-1">
-                                <img src="./image/logo.png" alt="logoFanPage">
-                            </div>
-                            <div class="img-2">
-                                <img src="./image/logo2.png" alt="logoFanPage">
-                            </div>
-                        </div>
-                    </a>
+                    <h1>Fan <span>Page</span></h1>
+                    <p>Argentina Campeón</p>
                 </div>
 
                 <div class="menu-nav">
@@ -37,57 +29,29 @@
                 </div>
     
                 <nav class="navegacion-principal">
-                    <a href="./index.html">Inicio</a>
-                    <a href="./pages/tienda.html">Tienda</a>
-                    <a href="./pages/galeria.html">Galería</a>
-                    <a href="./pages/contacto.html">Contacto</a>
+                    <a href="../index.html">Inicio</a>
+                    <a href="./tienda.html">Tienda</a>
+                    <a href="./galeria.html">Galería</a>
+                    <a href="./contacto.html">Contacto</a>
                 </nav>
             </div>
         </header>
 
-        <main>
-            <div class="dj-banner">
-                <div class="dj-bg">
-                    <img class="imgBanner" src="image/vamoArg.jpg" alt="" height="">
-                    <div class="dj-text">
-                        <div class="colorLetra">
-                            <h1 class="colorTitle"><b>¿Queres ser un verdadero fan?</b></h1>
-                            <p class="label">
+        <div id="map"></div>
+        <p>Ubicación de la sede</p>
 
-                                <a href="pages/tienda.html"> 
-                                    <input type="submit" value="Si Quiero" class="boton-naranja boton-vino">
-                                    <!-- <label
-                                        style="border-radius: 5px; background:rgb(70, 3, 70); border-color:white;  height:44px; color: white; width: 152px; text-align: right; font-size: 16px; padding-left: 5px; padding-right: 5px ;padding-top: 5px;padding-bottom:10px;margin-top: 30px;">Si
-                                        Quiero
-                                    </label> -->
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor">
-                <div id="juego">
-                    <h2 class="juegoPelotas">¿Donde esta la copa?</h2>
-                    <div onclick="usuario('0');" id="piedra"></div>
-                    <div onclick="usuario('1');" id="papel"></div>
-                    <div onclick="usuario('2');" id="tijera"></div>
-                    <div onclick="usuario('3');" id="otro"></div>
-                </div>
-                <div id="efecto" style="display:none" onclick="quitarEfecto();"> </div>
-    
-                <div class="iframe-video">
-                    <h2>¿Quieres ver los Goles de Argentina en Qatar 2022?</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dY2GNZkv_F4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-    
-                <section>
-                    <article class="article">
-                        <img class="cancha" src="./image/formacion.jpeg">
-                    </article>
-                </section>
+        <main class="contenedor contenido-contacto">
+            <div class="contactanos">
+                <h1 class="font-contacto">Contactanos</h1>
+
+                <ul>
+                    <li> Sede: <span>Oficina 1, piso 4</span></li>
+                    <li> Teléfono: <span> 541122334455</span></li>
+                    <li> Email: <span>laescaloneta@fansclub.com.ar</span></li>
+                </ul>
             </div>
         </main>
+
 
         <footer class="footer">
             <div class="contenedor">
@@ -138,7 +102,7 @@
                         </div>
                     </div>
                     
-                    <div class="contacto"><a href="./pages/api.html">Contactanos</a></div>
+                    <div class="contacto"><a href="./api.html">Contactanos</a></div>
     
                 </div>
     
@@ -149,8 +113,11 @@
             </div>
         </footer>
 
-        <script src="./menu.js"></script>
-        <script src="./main.js"></script>
+        <script src="./api.js"></script>
+        <script src="../menu.js"></script>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNbn7LeDP-ba2x4IpT-2-503nsb6rcQAA&callback=initMap">
+        </script>
         <script src="https://kit.fontawesome.com/266e8a2192.js" crossorigin="anonymous"></script>
     </body>
 </html>
